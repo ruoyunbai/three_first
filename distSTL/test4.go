@@ -16,7 +16,7 @@ func main() {
 	http.Handle("/gltf/", http.StripPrefix("/gltf/", http.FileServer(http.Dir("./gltf"))))
 	
 
-	log.Fatal(http.ListenAndServe("localhost:8000", nil))
+	log.Fatal(http.ListenAndServe(":8001", nil))
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
